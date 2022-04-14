@@ -1,0 +1,18 @@
+1) SELECT brand, model, price FROM cars;
+2) SELECT COUNT(*) AS quantity_of_car FROM cars;
+3) SELECT * FROM cars WHERE brand IN('Hyundai');
+4) SELECT * FROM cars WHERE color IN('Red','Blue');
+5) SELECT * FROM cars WHERE year_of_issue BETWEEN 2000 AND 2010;
+6) SELECT COUNT(*) FROM cars WHERE brand ='Chevrolet';
+7) SELECT ROUND(AVG(year_of_issue)) FROM cars;
+8) SELECT * FROM cars WHERE brand IN('Audi', 'Toyota','Kia','Ford');
+9) SELECT * FROM cars WHERE model ILIKE 'T%';
+10) SELECT * FROM cars WHERE model ILIKE '%E';
+11) FROM cars WHERE LENGTH(brand)=5;
+12) SELECT SUM(price) FROM cars WHERE brand IN('Mercedes-Benz');
+13) SELECT model, price FROM cars WHERE price=(SELECT MAX(price) FROM cars) OR price=(SELECT MIN(price) FROM cars) ORDER BY price DESC;
+14) SELECT * FROM cars WHERE brand NOT IN('Toyota');
+15) SELECT * FROM cars ORDER BY price DESC LIMIT 10;
+16) SELECT * FROM cars ORDER BY year_of_issue DESC OFFSET 5 LIMIT 15;
+17) SELECT * FROM cars WHERE year_of_issue NOT BETWEEN 1995 AND 2005;
+18) SELECT color, COUNT(*) FROM cars GROUP BY color ORDER BY COUNT(*) DESC;
